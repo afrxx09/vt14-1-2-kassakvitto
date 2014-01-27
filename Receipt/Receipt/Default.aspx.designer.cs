@@ -31,13 +31,22 @@ namespace DiscountReceipt {
         protected global::System.Web.UI.WebControls.Label lblTotalSum;
         
         /// <summary>
-        /// txtTotalSum control.
+        /// errorcontainer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTotalSum;
+        protected global::System.Web.UI.WebControls.Panel errorcontainer;
+        
+        /// <summary>
+        /// ValidationSummary1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
         
         /// <summary>
         /// lblError control.
@@ -47,6 +56,42 @@ namespace DiscountReceipt {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblError;
+        
+        /// <summary>
+        /// txtTotalSum control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTotalSum;
+        
+        /// <summary>
+        /// cvDoubleCheck control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator cvDoubleCheck;
+        
+        /// <summary>
+        /// cvGTZeroCheck control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator cvGTZeroCheck;
+        
+        /// <summary>
+        /// rfvNotEmpty control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNotEmpty;
         
         /// <summary>
         /// btnSubmit control.

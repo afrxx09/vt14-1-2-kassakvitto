@@ -1,10 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="DiscountReceipt.Default" EnableViewState="false" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="DiscountReceipt.Default" EnableViewState="false" ViewStateMode="Disabled" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <script src="scripts/script.js"></script>
     <link href="~/styles.css" rel="stylesheet" />
 </head>
 <body>
@@ -18,10 +19,16 @@
                     <asp:Label ID="lblTotalSum" runat="server">Total summa:</asp:Label>
                 </div>
                 <div class="formrow">
-                    <asp:TextBox ID="txtTotalSum" runat="server" TextMode="SingleLine"></asp:TextBox> kr <asp:Label ID="lblError" CssClass="error" runat="server" Visible="false"></asp:Label>
+                    <asp:Panel ID="errorcontainer" runat="server"></asp:Panel>
+                    <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
+                    <!--<asp:Label ID="lblError" CssClass="error" runat="server" Visible="false"></asp:Label>-->
+                    <asp:TextBox ID="txtTotalSum" runat="server" TextMode="SingleLine"></asp:TextBox> kr
+                    <asp:CompareValidator ID="cvDoubleCheck" runat="server" ErrorMessage="Värdet kan inte tolkas som ett tal.(c)" ControlToValidate="txtTotalSum" Display="Dynamic" Type="Double" Operator="DataTypeCheck" Text="*"></asp:CompareValidator>
+                    <asp:CompareValidator ID="cvGTZeroCheck" runat="server" ErrorMessage="Talet måste vara större än 0.(c)" ControlToValidate="txtTotalSum" Display="Dynamic" Operator="GreaterThan" ValueToCompare="0" Text="*" Type="Double"></asp:CompareValidator>
+                    <asp:RequiredFieldValidator ID="rfvNotEmpty" runat="server" ErrorMessage="Fältet får inte vara tomt.(c)" ControlToValidate="txtTotalSum" Display="Dynamic" Text="*"></asp:RequiredFieldValidator>
                 </div>
                 <div class="formrow">
-                    <asp:Button ID="btnSubmit" runat="server" Text="Beräkna summa" OnClick="btnSubmit_Click" />
+                    <asp:Button ID="btnSubmit" runat="server" Text="Beräkna summa" OnClick="btnSubmit_Click" CausesValidation="true" />
                 </div>
             </form>
         </div>
