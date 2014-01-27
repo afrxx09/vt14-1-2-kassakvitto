@@ -62,7 +62,6 @@
   <ItemGroup>
     <Content Include="Default.aspx" />
     <Content Include="Error.html" />
-    <Content Include="Scripts\script.js" />
     <Content Include="packages.config" />
     <None Include="Scripts\jquery-2.0.3.intellisense.js" />
     <Content Include="Scripts\jquery-2.0.3.js" />

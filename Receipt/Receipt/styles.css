@@ -99,6 +99,14 @@ button:focus {
     margin-top: 6px;
 }
 
+#errorcontainer ul{
+    list-style:none;
+}
+
+#errorcontainer ul li{
+    color:red;
+}
+
 /*Receipt*/
 #receipt {
     width:50%;
